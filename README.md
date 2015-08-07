@@ -1,2 +1,2 @@
 # CoderByte
-My CoderByte solutions for challenges 
+My solutions for Coderbyte challenges 
