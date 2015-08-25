@@ -18,3 +18,10 @@ var strArr = str.split(''); //Given string array
 	}
 };
 LetterChanges("String");
+
+var LetterChanges = function(str) { 
+	var alphaMap = {}; //create key/value pair for alphabet letters
+	//split string 
+	//bind key and letter in the string
+	
+
