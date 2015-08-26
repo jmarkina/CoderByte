@@ -10,3 +10,10 @@ function FirstReverse(str) {
 }
   
 FirstReverse("Reverse me");           
+
+//Another way to reverse string 
+
+function FirstReverse(str) {
+	reversedStr = str.split('').reverse().join('');
+	return reversedStr;
+}
