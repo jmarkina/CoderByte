@@ -1,30 +1,38 @@
-//problems: white spaces get removed;
-//symbols and numbers should be ignored;
+// Using the JavaScript language, have the function LongestWord(sen) 
+// take the sen parameter being passed and return the largest word in 
+// the string. If there are two or more words that are the same length, 
+// return the first word from the string with that length. 
+// Ignore punctuation and assume sen will not be empty. 
 
-var alphabet = 'abcdefghijklmnopqrstuvwxyz';
-var alphaMap = {};
-var vowels = "aeiouy";
-var output = [];
-var LetterChanges = function(str) {
-  str = str.replace(/[^a-zA-Z ]/ig,'');
-for (var i=0; i<alphabet.length; i++) {
-    alphaMap[alphabet[i]] = i; 
+function LongestWord(sen) { 
+	sen=sen.replace(/[^a-zA-Z ]/ig,'');
+	var splitStr = sen.split(' ');
+	var numArr = [];
+	for (var i=0; i<splitStr.length; i++) {
+		numArr.push(splitStr[i].length);
+		}
+		var maxNum = Math.max.apply(null, numArr);
+	for (var i=0; i<splitStr.length; i++) {
+		if (maxNum === splitStr[i].length) {
+			return splitStr[i];
+		}
+	}
 };
-for (var j=0; j<str.length; j++) {
-    var char = str[j].toLowerCase();
-    var mapIndex = alphaMap[char];
-    var replacement = alphabet[mapIndex+1];
-    if (replacement === undefined)
-        replacement = alphabet[0];
-    
-    if (vowels.indexOf(replacement) !== -1)
-        replacement = replacement.toUpperCase();
-    output[j] = replacement;
-    
-};
-  return result = output.join("");
-}
-   
 // keep this function call here 
 // to see how to enter arguments in JavaScript scroll down
-LetterChanges(readline());                            
+LongestWord(readline());           
+
+
+
+//FreeCodeCamp bonfire solution
+function findLongestWord(str) {
+  strArr = str.split(" ");
+  numArr = [];
+  for (var i=0; i<strArr.length; i++) {
+    numArr.push(strArr[i].length);
+  }
+  MaxNum = Math.max.apply(Math, numArr);
+  return MaxNum;
+}
+
+findLongestWord('What if we try a super-long word such as otorhinolaryngology');
