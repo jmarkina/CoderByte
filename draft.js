@@ -2,22 +2,6 @@
 //Use the Parameter Testing feature in the box below to test your code with different arguments.
 //TODO: if string contains characters, leave them as it is.
 //var alphabet 
-var LetterChanges = function(str) { 
-var alphabetArr = 'abcdefghijklmnopqrstuvwxyz'.split(''); //Aplhabet array
-var strArr = str.split(''); //Given string array
-	for(var i=0; i<strArr.length; i++) {
-		var letter = strArr[i]; //iterating trough given array to get letters
-			for (j=0; j<alphabetArr.length; i++) {
-				if (letter === alphabetArr[j]) {
-					var modifiedArr = [];
-					var modifiedLetter = String.fromCharCode(letter.charCodeAt(alphabetArr[j]) + 1);
-					modifiedArr = modifiedArr.push(modifiedLetter);
-					console.log(modifiedArr);
-				}
-			}	//find each letter in alphabet array
-	}
-};
-LetterChanges("String");
 
 var LetterChanges = function(str) { 
 	var alphaMap = {}; //create key/value pair for alphabet letters
