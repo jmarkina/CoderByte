@@ -1,4 +1,4 @@
-//problems: white spaces get removed;
+//TODO: white spaces get removed;
 //symbols and numbers should be ignored;
 
 var alphabet = 'abcdefghijklmnopqrstuvwxyz';
@@ -22,7 +22,7 @@ for (var j=0; j<str.length; j++) {
     output[j] = replacement;
     
 };
-  return result = output.join("");
+  return result = output.join(" ");
 }
    
 // keep this function call here 
