@@ -13,13 +13,10 @@ function CheckPlus(str) {
 	console.log(indexOfStrToCheck);
 	for (var k=0; k<indexOfStrToCheck.length; k++) {
 		var charIndex = indexOfStrToCheck[k];
-		while (str[charIndex] === "+") {
-			return true
-		}
-		// } else {
-		// 	return false; 
-		// }
+		if (str[charIndex] !== "+") {
+			return false;
+		} 
 	}
-
+	return true;
 }
 CheckPlus("+a+b=");	
