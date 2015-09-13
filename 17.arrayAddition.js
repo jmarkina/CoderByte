@@ -7,6 +7,9 @@
 // The array will not be empty, will not contain all the same elements, 
 // and may contain negative numbers. 
 
+//Currently this function sums up all the numbers except the largests 
+//and compares it with the sum
+
 function ArrayAddition(arr) {
 	var sortedArr = arr.sort(function(a,b) { return a - b; });
 	var sum = 0;
